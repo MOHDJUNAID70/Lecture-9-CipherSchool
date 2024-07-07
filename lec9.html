@@ -1,0 +1,68 @@
+<!-- Events -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <main>
+        <h1 onclick="myfunc(this)">My page title</h1>
+        <p>caption goes here</p>
+
+        <article class="firstart">
+            <h2>List of amazing fruits</h2>
+            <p>must eat friuts</p>
+
+            <div class="wrp1">
+                <ul class="apple1">
+                    <li class="apple">Apples</li>
+                    <li class="orange">Oranges</li>
+                    <li class="date">date</li>
+                    <li class="grapes">grapes</li>
+                </ul>
+            </div>
+            <div>
+                <button onclick="myfun(this)">the time is:  </button>
+                <p id="demo"></p>
+            </div>
+        </article>
+    </main>
+
+
+    <input type="text" id="first" onchange="uppercase()" />
+
+    <div onmouseover="mover(this)" onmouseout="mout(this)" style="background-color: brown; width: 120px; height: 20px; padding: 40px;" >Mouse over me</div>
+    <div onmousedown="mdown(this)" onmouseup="mup(this)" style="background-color: brown; width: 120px; height: 20px; padding: 40px;" >Mouse over me</div>
+    
+    <script>
+        function myfunc(id){
+            id.innerHTML='this is after click!';
+        }
+        function myfun(){
+            document.getElementById("demo").innerHTML=new Date();
+        }
+        function uppercase(){
+            const x=document.getElementById('first');
+            x.value=x.value.toUpperCase();
+        }
+        function mover(obj){
+            obj.innerHTML="Thank You!";
+        }
+        function mout(obj){
+            obj.innerHTML="Mouse over me";
+        }
+        function mdown(obj){
+            obj.style.backgroundColor="cyan";
+            obj.innerHTML="release me!";
+        }
+        function mup(obj){
+            obj.style.backgroundColor="yellow";
+            obj.innerHTML="Thank You!";
+        }
+    </script>
+
+
+ </body>
+ </html>
